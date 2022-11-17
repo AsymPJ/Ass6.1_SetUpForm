@@ -13,6 +13,7 @@
 		76643007292465A8001710E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76643005292465A8001710E4 /* Main.storyboard */; };
 		76643009292465A9001710E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76643008292465A9001710E4 /* Assets.xcassets */; };
 		7664300C292465A9001710E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7664300A292465A9001710E4 /* LaunchScreen.storyboard */; };
+		767D1C0329248BB000CEA9EC /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D1C0229248BB000CEA9EC /* RadioButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		76643008292465A9001710E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7664300B292465A9001710E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7664300D292465A9001710E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		767D1C0229248BB000CEA9EC /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				76643001292465A8001710E4 /* SceneDelegate.swift */,
 				76643003292465A8001710E4 /* ViewController.swift */,
 				76643005292465A8001710E4 /* Main.storyboard */,
+				767D1C0229248BB000CEA9EC /* RadioButton.swift */,
 				76643008292465A9001710E4 /* Assets.xcassets */,
 				7664300A292465A9001710E4 /* LaunchScreen.storyboard */,
 				7664300D292465A9001710E4 /* Info.plist */,
@@ -141,6 +144,7 @@
 				76643004292465A8001710E4 /* ViewController.swift in Sources */,
 				76643000292465A8001710E4 /* AppDelegate.swift in Sources */,
 				76643002292465A8001710E4 /* SceneDelegate.swift in Sources */,
+				767D1C0329248BB000CEA9EC /* RadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
