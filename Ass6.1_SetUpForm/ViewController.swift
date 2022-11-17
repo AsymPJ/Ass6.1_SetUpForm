@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
+
     
-    
+ 
     @IBOutlet weak var nametext: UITextField!
     
     @IBOutlet weak var lastNameText: UITextField!
@@ -30,6 +31,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buttonTerms: UIButton!
     
+    
+    @IBOutlet weak var pickerV: UIPickerView!
+    
+
     @IBOutlet weak var firstOpt: UIButton!
     
     @IBOutlet weak var secondOpt: UIButton!
@@ -41,14 +46,35 @@ class ViewController: UIViewController {
     let radioController: RadioButton = RadioButton()
     
     var arrayTextFields = [UITextField]()
+    
+    let countryList = NSLocale.isoCountryCodes.map{
+        (code:String) -> String in
+        let id = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.countryCode.rawValue: code])
+        let currentLocaleId = NSLocale.current.identifier
+        return NSLocale(localeIdentifier: currentLocaleId).displayName(forKey: NSLocale.Key.identifier, value: id) ?? "Country not found for code \(code)"
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerV.delegate = self
+        pickerV.dataSource = self
         // Do any additional setup after loading the view.
         buttonTerms.setImage(UIImage(named:"Checkmarkempty"), for: .normal)
         buttonTerms.setImage(UIImage(named:"Checkmark"), for: .selected)
         radioController.buttonsArray = [firstOpt,secondOpt,thirdOpt,forthOpt]
         arrayTextFields = [nametext,lastNameText,emailText,phoneText,addressText,addressLine1,cityText,stateText,zipText]
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        countryList.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return countryList[row]
     }
 
     @IBAction func buttonFirstPress(_ sender: UIButton) {
